@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jose George - Resume</title>
+<link
+  rel="stylesheet"
+  href="resume_format.css"
+/>
+</head>
+<body>
+
+<!-- Fixed logo at top-left corner -->
+<img id="logo-fixed" src="assets/images/resume_logo.png" alt="Logo"/>
+
+<header>
+    <h1>Jose George</h1>
+    <h2 class="color-gold"> <img src="assets/images/integration.gif" height="30"> Integration || SRE || Automation <img src="assets/images/automation.gif" height="30"</h2>
+</header>
+
+<main id="main">
+  <div id="sidebar">
+    <button onclick="showSection('home')">🏠</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('employment')">Employment</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact Me</button>
+    <!-- Add more buttons as needed -->
+  </div>
+  <div id="main-content">
+    <h2>About Me</h2>
+    <h3>An experienced leader with strong <em>technical</em> and <em>product</em> skills</h3>
+    <h3>Passionate about <em>Integration</em>, <em>SRE</em> and <em>Automation</em>.</h3>
+    <h3>Self-driven, hands-on, result oriented and stability focused.</h3>
+  </div>
+</main>
+
+<!-- Font Awesome CDN for icons -->
+<!--<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>-->
+
+<script>
+  function showSection(section) {
+    const contentDiv = document.getElementById('main-content');
+    if (section === 'home') {
+      contentDiv.innerHTML = `
+        <h2>About Me</h2>
+        <h3>An experienced leader with strong <em>technical</em> and <em>product</em> skills</h3>
+        <h3>Passionate about <em>Integration</em>, <em>SRE</em> and <em>Automation</em>.</h3>
+        <h3>Self-driven, hands-on, result oriented and stability focused.</h3>
+      `;
+  } else if (section === 'skills') {
+    contentDiv.innerHTML = `
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1 1 45%; min-width: 300px;">
+        <h3>Integration / SRE</h3>
+        <ul>
+          <li>IBM MQ <span class="stars">★★★★★</span></li>
+          <li>IIB / ACE <span class="stars">★★★★★</span></li>
+          <li>Webmethods IS <span class="stars">★★★☆☆</span></li>
+        </ul>
+        </div>
+        <div style="flex: 1 1 45%; min-width: 300px;">
+        <h3>Observability</h3>
+        <ul>
+          <li>Dynatrace <span class="stars">★★★★★</span></li>
+          <li>Elastic <span class="stars">★★★★☆</span></li>
+          <li>Grafana <span class="stars">★★★☆☆</span></li>
+        </ul>
+        </div>
+        <div style="flex: 1 1 45%; min-width: 300px;">
+        <h3>Automation</h3>
+        <ul>
+          <li>Power Automate <span class="stars">★★★★★</span></li>
+          <li>Copilot Studio <span class="stars">★★★★☆</span></li>
+          <li>Logic Apps <span class="stars">★★★☆☆</span></li>
+          <li>Python <span class="stars">★★★★★</span></li>
+          <li>Ansible <span class="stars">★★★☆☆</span></li>
+        </ul>
+        </div>
+        <div style="flex: 1 1 45%; min-width: 300px;">
+        <h3>Programming / Scripting</h3>
+        <ul>
+          <li>Python <span class="stars">★★★★★</span></li>
+          <li>Javascript <span class="stars">★★★★☆</span></li>
+          <li>NodeJS <span class="stars">★★★☆☆</span></li>
+          <li>Shell Script <span class="stars">★★★☆☆</span></li>
+        </ul>
+        </div>
+        <div style="flex: 1 1 45%; min-width: 300px;">
+        <h3>Documentation & Collaboration</h3>
+        <ul>
+          <li>Sharepoint <span class="stars">★★★★☆</span></li>
+          <li>Confluence <span class="stars">★★★☆☆</span></li>
+          <li>Jira <span class="stars">★★★☆☆</span></li>
+        </ul>
+        </div>
+        <div style="flex: 1 1 45%; min-width: 300px;">
+        <h3>Azure</h3>
+        <ul>
+          <li>KQL <span class="stars">★★★★★</span></li>
+          <li>Logic Apps <span class="stars">★★★☆☆</span></li>
+          <li>Function Apps <span class="stars">★★★☆☆</span></li>
+        </ul>
+        </div>
+        <div style="flex: 1 1 45%; min-width: 300px;">
+        <h3>OS</h3>
+        <ul>
+          <li>Linux [RHEL, Ubuntu] <span class="stars">★★★★★</span></li>
+          <li>AIX <span class="stars">★★★★★</span></li>
+          <li>Solaris <span class="stars">★★★☆☆</span></li>
+          <li>Windows <span class="stars">★★★★☆</span></li>
+        </ul>
+        </div>
+      </div>
+      <br />
+    `;
+  } else if (section === 'education') {
+      contentDiv.innerHTML = `
+        <h2>Bachelor of Technology [ B.Tech ]</h2>
+        <h3>College of Engineering, Trivandrum</h3>
+        <h3>University of Kerala</h3>
+      `;
+    } else if (section === 'employment') {
+      contentDiv.innerHTML = `
+        <h2>Employment Summary</h2>
+        <p><strong>AIA, Malaysia</strong> <b><em>SRE</em> [2023 - Present]</b>: Design and implement SRE practice. Establish and maintain SLI’s, SLO’s and Error Budgets for the systems and make sure these are met. Improve system-observability. Automate and eliminate Toil. Take part in critical Incident Management calls and RCAs to make sure the root cause is established, and the resolution is in place; to avoid repeating incidents.</p>
+        <p><strong>Standard Chartered GBS, Malaysia</strong> <b><em>Head of SRE & PSS / Lead for Hygiene (Integration & Network Services)</em> [2019 – 2023]:</b> Focused on the hygiene across integration and network domains at Standard Chartered GBS. This includes establishing critical focus areas such as System Readiness & Acceptance (SRA), management of Privileged IDs, Backup & Log Management, and ensuring Data Quality. Also extensively used Python for data reconciliation and cleanup, as well as for processing various reports and logs across the estate.</p>
+        <p><strong>Maybank, Malaysia</strong> <b><em>Head of Emerging Tech & API</em> [2014 – 2019]:</b><br />
+          <em>Leadership and Management:</em> led the SRE/Production Support team responsible for managing the integration estate, which provided 24x7 support for global business operations.<br />
+          <em>Technological Development and Innovation:</em> involved in working with emerging technologies, particularly in conducting studies and proof of concepts (PoCs).<br />
+          <em>API & Emerging Tech:</em> managed a small team of technologists who focused on API management solutions, NodeJS, and containers, highlighting the necessary technology-stack for adopting and implementing as new tech solutions.<br />
+          <em>Solution Design and Technical Services:</em> roles encompassed development, solution design, architecture, and technical services, with an emphasis on L3 support for integration technologies.<br /></p>
+        <p><strong>Standard Chartered, Malaysia</strong> <b>[2004 – 2014]:</b> <br />
+          <em>App Management Team Lead (2004 – 2006):</em> responsible for Level 2 (L2) support, which involved production support, bug fixes, and enhancements for production components.<br />
+          <em>Technical Specialist (2006 – 2010):</em> responsibilities expanded to include architecture and design, establishing best practices, developing product roadmaps, conducting product and code reviews, proof of concepts (PoCs), and Level 3 (L3) support. Also liaised with IBM on PMRs (Problem Management Records).<br />
+          <em>Technical Services Manager (2010 – 2012):</em> In this managerial position, oversaw engineering services, aligning them with the broader organizational objectives and ensuring their effective delivery.<br />
+          <em>Senior Manager – Integration Services (2012 – 2014):</em> As a Senior Manager, was responsible for the management and strategic direction of integration services within the organization.<br /></p>
+        <p><strong>HCL Technologies Ltd, Singapore, Hong Kong & Malaysia</strong> <b><em> MQ/MQSI Developer, System Analyst</em> [2001 – 2004]:</b> MQ/MQSI Developer for messaging and transformation projects. (Worked across Singapore, Hong Kong, and Malaysia for Standard Chartered Bank).</p>
+        <p><strong>eCalyx India Pvt Ltd and DSQ Software Ltd, India</strong> <b><em>Software Developer</em> [2000 – 2001]:</b> Worked on C++, COM/DCOM and MSMQ projects.</p>
+       `;
+    } else if (section === 'projects') {
+      contentDiv.innerHTML = `
+        <h2>Key Highlights</h2>
+        <p><strong>Data:</strong> Responsible for Python projects related to data reconciliation, data cleanup, and data processing from various reports and logs. This includes streamlining focus areas like SRA, Privileged IDs, Backup & Log Management, and Data Quality on the Configuration Management Database, which is the primary source for the estate inventory.</p>
+        <p><strong>Reports:</strong> Done automated tasks using python for report generation.</p>
+        <p><strong>Integration:</strong> Have done integration development and configurations for various business critical appications (like internet / mobile banking, trade applications etc) across 40 countries. An SME in integration technologies like IBM MQ, Message Broker / IIB / ACE.</p>
+        <p><strong>Automation:</strong> Done various automation projects using PowerAutomate, Copilot Studio and Python - execute various tasks at the backend servers based on user inputs or schedule jobs and send the result notification emails to the users.</p>
+        <p><strong>Engineering:</strong> Have taken case various engineering projects for system stability - like, tech-stack refresh, setup infra for MQ integration hubs, reengineer & optimise message-flows for better efficiency and stability.</p>
+        <p><strong>Observability:</strong> Have worked with various observability platforms like Dynatrace, Elastic and Grafana. Done onboarding configurations and settings for multiple applications for Distributed Tracing, RUM, Log, PII Masking etc.</p>
+        <p><strong>OTEL:</strong> Worked on OpenTelemetry enablement for apps tracing. Developed reference scripts in python. Also configured Webmethods IS to generate OTEL traces for integrating with observability platforms.</p>
+       `;
+    } else if (section === 'contact') {
+      contentDiv.innerHTML = `
+        <p><img src="assets/images/contact.gif" height="100"/></p>
+        <h3><img src="assets/images/mobile.png" height="30"/>: +60126948694</h3>
+        <h3><img src="assets/images/email.png" height="30"/>: jose@kalanowa.onmicrosoft.com</h3>
+        <p><iframe src="https://www.google.com/maps/embed?pb=!4v1746964537454!6m8!1m7!1s3VciEf_21iw_iiern4wCsg!2m2!1d3.105863333696412!2d101.6395771767655!3f108.3300526630333!4f14.172101134279217!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+       `;
+    }
+  }
+</script>

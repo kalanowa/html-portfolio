@@ -1,0 +1,80 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #D8BFD8; /* light purple */
+}
+
+/* Fix the logo at top-left corner */
+#logo-fixed {
+position: fixed;
+top: 10px;
+left: 65px;
+width: 70px; /* adjust size */
+height: auto;
+z-index: 999; /* stay on top */
+border-radius: 8px; /* optional */
+box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* optional shadow */
+}
+
+/* Header below logo (give margin to push it down) */
+header {
+background-color: #2E006E; /* dark purple */
+color: #fff;
+padding: 10px 10px 10px 10px; /* top padding to prevent overlap with logo */
+text-align: center;
+margin-top: 0; /* no margin needed, padding accounts for spacing */
+}
+/* Optional: style for header texts */
+header h1, header p {
+margin: 0;
+}
+
+/* Style for star ratings */
+.stars {
+/*color: gold;*/
+/*color: purple;*/
+/*color: darkgoldenrod;*/
+color: goldenrod;
+font-size: 24px;
+}
+.color-gold{
+color: peachpuff;
+}
+/* Rest of the layout */
+main {
+display: flex;
+height: calc(100vh - 100px); /* fill space below header */
+}
+
+#sidebar {
+width: 200px;
+background-color: #2E006E; /* darker purple */
+padding-top: 10px;
+padding-left: 10px;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+}
+
+#sidebar button {
+display: block;
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+background-color: #4B0082;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+#sidebar button:hover {
+background-color: #6A0DAD;
+}
+
+#main-content {
+flex: 1;
+padding: 20px;
+overflow-y: auto;
+}
+
